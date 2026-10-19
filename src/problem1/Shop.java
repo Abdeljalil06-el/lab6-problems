@@ -27,7 +27,14 @@ public class Shop
 
 // *** create a new item and add it to the cart
             // *** print the contents of the cart object using println
-            System.out.println(cart);
+            double total=0;
+            for (int i=0; i<cart.size();i++){
+                Item curr=cart.get(i);
+                System.out.println(curr);
+                total+=curr.getQuantity()*curr.getPrice();
+            }
+            System.out.println("Total : " + total);
+
             System.out.print ("Continue shopping (y/n)? ");
             keepShopping = scan.nextLine();
         }
