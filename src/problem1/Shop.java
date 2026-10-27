@@ -33,7 +33,7 @@ public class Shop
                 System.out.println(curr);
                 total+=curr.getQuantity()*curr.getPrice();
             }
-            System.out.println("Total : " + total);
+            System.out.printf("Total : %.2f%n",total);
 
             System.out.print ("Continue shopping (y/n)? ");
             keepShopping = scan.nextLine();
